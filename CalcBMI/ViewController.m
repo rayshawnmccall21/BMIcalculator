@@ -26,4 +26,21 @@
 }
 
 
+- (IBAction)calculateButtonPressed:(id)sender {
+    NSLog(@"Calculate Pressed");
+    
+    float height = [[self.userHeightTextField text] floatValue];
+    float weight = [[self.userWeightTextField text] floatValue];
+    
+    NSLog(@"height: %f weight %f", height, weight);
+    
+    float BMI = (weight * 0.45)/ ((height*0.025)* (height*0.025));
+    NSLog(@"BMI: %f", BMI);
+    
+    NSString *BMIText = [NSString stringWithFormat:@"%.1f", BMI];
+    
+    self.userBMITextField.text = BMIText;
+    
+    
+}
 @end

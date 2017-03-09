@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *userHeightTextField;
+@property (weak, nonatomic) IBOutlet UITextField *userWeightTextField;
+@property (weak, nonatomic) IBOutlet UITextField *userBMITextField;
+
+- (IBAction)calculateButtonPressed:(id)sender;
 
 @end
 
